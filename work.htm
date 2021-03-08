@@ -1,0 +1,48 @@
+﻿<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>工作动态</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="text-align:center">
+<div id="content">
+		<img src=images/header.jpg>
+		<ul id="menu">
+			<li><a href="index.htm">后勤首页</a></li>
+			<li><a href="department.htm">部门概况</a></li>
+			<li><a href="rules.htm">规章制度</a></li>
+			<li><a href="serve.htm">服务指南</a></li>
+			<li><a id="last" href="#">意见信箱</a></li>
+		</ul>
+
+
+<div align="left">
+     <php> {section name=l loop=$sm_list}
+     <div class="listtt">
+      <h2><a href="list.php?cid={$sm_list[l].cid}">{$sm_list[l].cidname}</a></h2>
+      <span><a href="view.php?id={$sm_list[l].id}">{$sm_list[l].title}</a></span>
+      <div id="more">{$sm_list[l].date_time}</div>
+    </div>
+    {/section}
+
+</div>
+		
+{$pagenav}        
+        
+        <div style="clear: both;"></div>
+</div>
+<div id="prefooter">
+		<p>
+<select class="input" onChange="if(this.value!='')window.open(this.value);this.options[0].selected=true" size="1">
+<option value="" selected>友 情 链 接</option>
+<option value=http://http://www.ncst.edu.cn//>华北理工大学官网</option>
+<option value=http://hqggfw.ncst.edu.cn//>华北理工大学后勤处</option>
+<option value=http://http://newstest.ncst.edu.cn//>华北理工大学新闻网</option>
+</select>
+</p>
+	</div>
+	<div id="footer">
+		<p>© Copyright 2020, <a href="#">华北理工大学后勤管理处</a>, Design:ujung_S2, <a title="华北理工大学" href="http://202.206.208.65/">华北理工大学</a></p>
+	</div>
+</body>
+</html>
